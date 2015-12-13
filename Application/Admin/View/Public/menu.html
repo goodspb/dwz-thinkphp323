@@ -1,0 +1,22 @@
+<div class="accordion" fillSpace="sideBar">
+    <div class="accordionHeader">
+        <h2><span>Folder</span>应用</h2>
+    </div>
+    <div class="accordionContent">
+
+        <ul class="tree treeFolder">
+            <volist id="item" name="menu">
+                <neq name="item['name']|strtolower" value="public">
+                    <neq name="item['name']|strtolower" value="index">
+                        <eq name="item['access']" value="1">
+                            <li><a href="{:U($item['name'].'/index')}" target="navTab" rel="{$item['name']}">{$item['title']}</a>
+                            </li>
+                        </eq>
+                    </neq>
+                </neq>
+            </volist>
+
+        </ul>
+
+    </div>
+</div>
