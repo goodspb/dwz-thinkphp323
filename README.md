@@ -1,6 +1,6 @@
 ##dwz后端框架 + ThinkPHP 3.2.3
 
-### fock from https://code.csdn.net/dwzteam/dwz_thinkphp 
+### fork from https://code.csdn.net/dwzteam/dwz_thinkphp 
 
 ### 背景
 
