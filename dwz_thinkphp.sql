@@ -199,25 +199,25 @@ DROP TABLE IF EXISTS `user`;
 SET @saved_cs_client     = @@character_set_client;
 SET character_set_client = utf8;
 CREATE TABLE `user` (
-  `id` smallint(5) unsigned NOT NULL auto_increment,
-  `account` varchar(64) NOT NULL,
-  `nickname` varchar(50) NOT NULL,
-  `password` char(32) NOT NULL,
-  `bind_account` varchar(50) NOT DEFAULT NULL,
-  `last_login_time` int(11) unsigned default '0',
-  `last_login_ip` varchar(40) default NULL,
-  `login_count` mediumint(8) unsigned default '0',
-  `verify` varchar(32) default NULL,
-  `email` varchar(50) NOT NULL,
-  `remark` varchar(255) NOT NULL,
-  `create_time` int(11) unsigned NOT NULL,
-  `update_time` int(11) unsigned NOT DEFAULT 0,
-  `status` tinyint(1) default '0',
-  `type_id` tinyint(2) unsigned default '0',
-  `info` text NOT DEFAULT NULL,
-  PRIMARY KEY  (`id`),
-  UNIQUE KEY `account` (`account`)
-) ENGINE=MyISAM AUTO_INCREMENT=37 DEFAULT CHARSET=utf8;
+	`id` smallint(5) unsigned NOT NULL auto_increment, 
+	`account` varchar(64) NOT NULL, 
+	`nickname` varchar(50) NOT NULL, 
+	`password` char(32) NOT NULL, 
+	`bind_account` varchar(50) DEFAULT NULL, 
+	`last_login_time` int(11) unsigned DEFAULT 0, 
+	`last_login_ip` varchar(40) DEFAULT NULL, 
+	`login_count` mediumint(8) unsigned DEFAULT 0, 
+	`verify` varchar(32) DEFAULT NULL, 
+	`email` varchar(50) NOT NULL, 
+	`remark` varchar(255) NOT NULL, 
+	`create_time` int(11) unsigned NOT NULL, 
+	`update_time` int(11) unsigned DEFAULT 0, 
+	`status` tinyint(1) DEFAULT 0, 
+	`type_id` tinyint(2) unsigned DEFAULT 0, 
+	`info` text DEFAULT NULL, 
+	PRIMARY KEY (`id`), 
+	UNIQUE KEY `account` (`account`)
+) ENGINE = MyISAM AUTO_INCREMENT = 37 DEFAULT CHARSET = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
